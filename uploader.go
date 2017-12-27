@@ -1,0 +1,5 @@
+package asseter
+
+func upload() {
+
+}

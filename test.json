@@ -1,0 +1,14 @@
+{
+  "name": "testing",
+  "images": {
+    "set0": [
+      {
+        "key": "image0",
+        "image": {
+          "en-US": "/images/100.jpeg",
+          "zh-TW": "/images/404.jpeg"
+        }
+      }
+    ]
+  }
+}
