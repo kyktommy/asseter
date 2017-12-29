@@ -10,6 +10,7 @@ import (
 type GenerateConfig struct {
 	AssetConfig  string
 	InputAssets  []string
+	InputDir     string
 	OutputAssets []string
 	OutputDir    string
 }
@@ -27,7 +28,7 @@ func Generate(c GenerateConfig) error {
 		cfg = strings.Replace(cfg, c.InputAssets[i], c.OutputAssets[i], -1)
 
 		// read file
-		f, err := ioutil.ReadFile(path.Join(".", c.InputAssets[i]))
+		f, err := ioutil.ReadFile(path.Join(".", c.InputDir, c.InputAssets[i]))
 		if err != nil {
 			return err
 		}

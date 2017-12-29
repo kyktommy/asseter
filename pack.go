@@ -8,8 +8,9 @@ import (
 )
 
 type PackConfig struct {
-	BaseURL string
-	Assets  []string
+	InputDir string
+	BaseURL  string
+	Assets   []string
 }
 
 type PackedAssets struct {
@@ -23,7 +24,7 @@ func Pack(c PackConfig) (*PackedAssets, error) {
 		Output: []string{},
 	}
 	for _, f := range packed.Input {
-		ba, err := ioutil.ReadFile(path.Join(".", f))
+		ba, err := ioutil.ReadFile(path.Join(".", c.InputDir, f))
 		if err != nil {
 			return nil, err
 		}

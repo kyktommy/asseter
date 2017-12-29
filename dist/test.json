@@ -1,0 +1,14 @@
+{
+  "name": "testing",
+  "images": {
+    "set0": [
+      {
+        "key": "image0",
+        "image": {
+          "en-US": "/statics/images/69382363afbc19916a477f7acab11023.jpeg",
+          "zh-TW": "/statics/images/c7cecb798ecd0b0d467c019bcc362ba1.jpeg"
+        }
+      }
+    ]
+  }
+}

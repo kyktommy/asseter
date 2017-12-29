@@ -53,8 +53,9 @@ func TestPack(t *testing.T) {
 	}
 
 	packed, err := asseter.Pack(asseter.PackConfig{
-		BaseURL: "/statics",
-		Assets:  assets,
+		InputDir: "./assets",
+		BaseURL:  "/statics",
+		Assets:   assets,
 	})
 
 	if err != nil {

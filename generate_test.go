@@ -20,6 +20,7 @@ func TestGenerate(t *testing.T) {
 
 	err := asseter.Generate(asseter.GenerateConfig{
 		AssetConfig: "./test.json",
+		InputDir:    "./assets",
 		InputAssets: []string{
 			"/images/100.jpeg",
 			"/images/404.jpeg",
@@ -52,8 +53,8 @@ func TestGenerate(t *testing.T) {
 		t.Error(err)
 	}
 
-	if !strings.Contains(string(ba), "69382363afbc19916a477f7acab11023.jpeg") ||
-		!strings.Contains(string(ba), "c7cecb798ecd0b0d467c019bcc362ba1.jpeg") {
+	if !strings.Contains(string(ba), "/statics/images/69382363afbc19916a477f7acab11023.jpeg") ||
+		!strings.Contains(string(ba), "/statics/images/c7cecb798ecd0b0d467c019bcc362ba1.jpeg") {
 		t.Errorf("invalid asset config file")
 		return
 	}
